@@ -1,16 +1,51 @@
+@mixin assign-grid-area {
+  @for $i from 2 through 4 {
+    .cards-list__item:nth-child(#{$i}) {
+      grid-area: card#{($i - 2)};
+      @if $i % 2 == 0 {
+        align-self: stretch;
+        justify-self: end;
+      }
+      @else {
+        align-self: end;
+      }
 
-.cards_list {
-  display: flex;
-  flex-wrap: wrap;
+      @if $i == 2 {
+        padding-top: -150px !important;
+      }
+    }
+  }
 }
+
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, 400px);
+  justify-items: center;
+  grid-template-areas: 
+    ". text  card0 ."
+    ". card1 card0 ."
+    ". card1 card2 ."
+    ". . card2 .";
+
+  @include assign-grid-area;
+  margin-bottom: 50px;
+}
+
 .cards-list__item {
   box-shadow: 5px 20px 50px 0px #1070B133;
-  width: 50%;
-
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 50px;
+  padding: 48px;
 }
 
-.cards-list__image {
-  width: 100%; /* or any custom size */
-  height: 100%; 
-  object-fit: contain;
-}
+.cards-list__text {
+  grid-area: text;
+} 
+
+// .cards-list__image {
+//   object-fit: contain;
+// }

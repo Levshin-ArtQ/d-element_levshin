@@ -2,8 +2,10 @@ import './index.scss';
 import aIcon from './assets/images/a-logo.svg';
 import heroIllustration from './assets/images/hero-illustration.svg';
 import { initializeNav } from './components/nav/nav.js';
+import { initializeFooter } from './components/footer/footer.js';
 import burgerIcon from '/src/assets/images/burger-icon.svg';
 import Card from './components/description/card.js';
+
 import cardImage1 from './assets/images/card-image1.svg';
 import cardImage2 from './assets/images/card-image2.svg';
 import cardImage3 from './assets/images/card-image3.svg';
@@ -19,12 +21,14 @@ const cards = [
 document.addEventListener('DOMContentLoaded', () => {
   
   initializeNav(aIcon, burgerIcon);
+  initializeFooter();
   let cardsList = document.querySelector('.cards-list');
   
   cards.map((element, index) => {
-    console.log('creating element')
     let card = new Card(element.imageSrc, element.title, element.description, element.link)
-    cardsList.appendChild(card.createCardElement())
+    let newNode = card.createCardElement()
+    newNode.classList.add('cards-list__item'+index);
+    cardsList.appendChild(newNode)
   });
   window.removeEventListener("DOMContentLoaded", loader);
 }, {once: true})

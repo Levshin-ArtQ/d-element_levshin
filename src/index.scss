@@ -1,9 +1,27 @@
+$primary: #f8f9fa;
+$secondary: #212529;
+$section-radius: 200px;
+$card-radius: 10px;
 
 
-.hero-content {
+body {
+  color: #333
+}
+
+.hero__slogan {
   font-family: Galien;
   font-size: 64px;
+  color: #1F3F68;
+  text-align: left;
+}
 
+[class$=__text] {
+  font-family: Gilroy;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
   text-align: left;
 
 }
+
+

@@ -1,6 +1,6 @@
 
 
-export function initializeNav(images) {
-  document.querySelector('.logo').innerHTML = images[0];
-  document.querySelector('.burger').innerHTML = images[1];
+export function initializeNav(aIcon, burger) {
+  document.querySelector('.logo').innerHTML = aIcon;
+  document.querySelector('.burger').innerHTML = burger;
 }

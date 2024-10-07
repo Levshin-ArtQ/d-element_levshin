@@ -13,6 +13,7 @@ export default class Card {
     // Создание элементов карточки
     const card = document.createElement('article');
     card.classList.add('cards-list__item');
+    
 
     const image = document.createElement('img');
     image.classList.add('cards-list__image');

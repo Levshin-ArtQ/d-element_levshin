@@ -1,0 +1,91 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-top: 1px solid #ECECEC;
+}
+
+.client-section {
+  background: #5A98D0;
+  border-top-left-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  width: 100%;
+}
+
+.client-section__table {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-items: center;
+  grid-template-areas: 
+    ". . . ."
+    ". . . .";
+}
+.client-section__table {
+
+  // Locally scoped variables
+  --gap: 2rem;
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: 2px;
+  --line-color: red;
+
+  // Grid layout
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+  gap: var(--gap);
+}
+
+// Make Grid Items Control Absolute Pseudo Positioning
+.client-table__item {
+  position: relative;
+}
+
+// Pseudo Element Shared Styling
+.client-table__item::before, 
+.client-table__item::after {
+  content: '';
+  position: absolute;
+  background-color: var(--line-color);
+  z-index: 1;
+}
+
+// Row Borders
+.client-table__item::after {
+  inline-size: 100vw;
+  block-size: var(--line-thickness);
+  inset-inline-start: 0;
+  inset-block-start: calc(var(--line-offset) * -1);
+}
+
+// Column Borders
+.client-table__item::before {
+  inline-size: var(--line-thickness);
+  block-size: 100vh;
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--line-offset) * -1);
+}
+
+.hire-section {
+  display: flex;
+  background: #316099;
+
+  // align-items: center;
+  flex-direction: column;
+  align-self: start;
+  padding: 90px 0;
+  width: 90%;
+  border-top-right-radius: 200px;
+}
+
+.credentials-section {
+  background: #316099;
+  width: 90%;
+  align-self: start;
+}
