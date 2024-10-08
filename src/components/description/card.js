@@ -7,6 +7,7 @@ export default class Card {
     this.title = title;
     this.description = description;
     this.link = link;
+    
   }
 
   createCardElement() {

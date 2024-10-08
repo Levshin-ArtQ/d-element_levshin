@@ -23,6 +23,7 @@
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(2, auto);
   justify-items: center;
+  justify-content: center;
   grid-template-areas: 
     ". . . ."
     ". . . .";
@@ -32,8 +33,8 @@
   // Locally scoped variables
   --gap: 2rem;
   --line-offset: calc(var(--gap) / 2);
-  --line-thickness: 2px;
-  --line-color: red;
+  --line-thickness: 1px;
+  --line-color: white;
 
   // Grid layout
   display: grid;
@@ -45,6 +46,12 @@
 // Make Grid Items Control Absolute Pseudo Positioning
 .client-table__item {
   position: relative;
+  
+}
+
+.client-table__item:nth-last-child(1) {
+  width: 100%;
+  text-align: center;
 }
 
 // Pseudo Element Shared Styling
@@ -83,7 +90,6 @@
   width: 90%;
   border-top-right-radius: 200px;
 }
-
 .credentials-section {
   background: #316099;
   width: 90%;

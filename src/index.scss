@@ -24,4 +24,33 @@ body {
 
 }
 
+[class$=__slogan] {
+  font-family: Galien;
+  font-size: 64px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+[class$=__title] {
+  font-family: Gilroy;
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+[class$=__button] {
+  margin-top: 40px;
+  padding: 15px 50px;
+  background: #5A98D0;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
+  font-family: Gilroy;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  align-self: start;
+}
 

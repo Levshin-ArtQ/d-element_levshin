@@ -1,6 +1,14 @@
+import './nav.scss';
+export default function initializeNav(aIcon, burger) {
+  const logo = document.querySelector('.icon-container__logo');
+  const burgerButton = document.querySelector('.icon-container__burger');
+  console.log(logo, burgerButton);
+  if (!logo || !burgerButton) {
+    throw new Error('Unable to find required elements');
+  }
 
 
-export function initializeNav(aIcon, burger) {
-  document.querySelector('.logo').innerHTML = aIcon;
-  document.querySelector('.burger').innerHTML = burger;
+
+  logo.src = aIcon;
+  burgerButton.src = burger;
 }

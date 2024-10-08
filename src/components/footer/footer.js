@@ -11,15 +11,15 @@ const sampleClients = [
   'More Client',
 ]
 
-export  function initializeFooter() {
+export function initializeFooter() {
   const footer = document.querySelector('.footer');
   const clientTable = document.querySelector('.client-section__table');
-
+  console.log(footer, clientTable);
   sampleClients.map((element, index) => {
-    let newNode = document.createElement('span');
+    let newNode = document.createElement('div');
     newNode.classList.add('client-table__item');
     newNode.textContent = element;
-    footer.appendChild(newNode);
+    clientTable.appendChild(newNode);
   })
 
 }

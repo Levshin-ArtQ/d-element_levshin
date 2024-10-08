@@ -1,15 +1,16 @@
-import './index.scss';
-import aIcon from './assets/images/a-logo.svg';
+require('./index.scss');
+const aIcon = require('./assets/images/a-logo.svg');
 import heroIllustration from './assets/images/hero-illustration.svg';
-import { initializeNav } from './components/nav/nav.js';
+import initializeNav from './components/nav/nav.js';
+import initializeHero from './components/hero/hero.js';
 import { initializeFooter } from './components/footer/footer.js';
 import burgerIcon from '/src/assets/images/burger-icon.svg';
 import Card from './components/description/card.js';
 import PopupForm from './components/popup/popup.js';
 
-import cardImage1 from './assets/images/card-image1.svg';
-import cardImage2 from './assets/images/card-image2.svg';
-import cardImage3 from './assets/images/card-image3.svg';
+const cardImage1 = require('./assets/images/card-image1.svg');
+const cardImage2 = require('./assets/images/card-image2.svg');
+const cardImage3 = require('./assets/images/card-image3.svg');
 
 
 // imageSrc, title, description, link
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   initializeNav(aIcon, burgerIcon);
   initializeFooter();
+  initializeHero(heroIllustration);
   let cardsList = document.querySelector('.cards-list');
   const popupForm = new PopupForm();
 
