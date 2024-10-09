@@ -18,11 +18,18 @@ module.exports = (env) => {
           test: /\.svg/,
           type: "asset/resource",
           generator: {
-            filename: "images/[hash][ext]",
+            filename: "images/[name][ext]",
           },
           // use: {
           //   loader: "image-webpack-loader",
           // },
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/i,
+          type: "asset/resource",
+          generator: {
+            filename: "fonts/[name][ext]",
+          },
         },
         {
           test: /\.(js)$/,
@@ -46,9 +53,9 @@ module.exports = (env) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'public', 'index.html'),
+        template: path.resolve(__dirname, 'src', 'index.html'),
         filename: 'index.html',
-        // inject: true,
+        inject: true,
       }),
     
       new MiniCssExtractPlugin({
@@ -56,10 +63,11 @@ module.exports = (env) => {
       }),
     ],
     devServer: {
-      watchFiles: ["public/index.html"],
+      watchFiles: ["src/index.html"],
       static: path.resolve(__dirname, "./dist"),
       hot: true,
       open: true,
+      port: 8101,
     },
     watchOptions: {
       poll: 1000,

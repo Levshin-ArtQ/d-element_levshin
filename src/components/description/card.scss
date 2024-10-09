@@ -8,7 +8,7 @@
       }
       @else {
         align-self: end;
-        
+
       }
 
       @if $i == 2 {
@@ -18,16 +18,16 @@
   }
 }
 
-.cards-list {
+.cards-list__content {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(4, 400px);
-  justify-items: center;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+  // justify-items: center;
   grid-template-areas: 
-    ". text  card0 ."
-    ". card1 card0 ."
-    ". card1 card2 ."
-    ". . card2 .";
+    "text  card0"
+    "card1 card0"
+    "card1 card2"
+    ".     card2";
 
   @include assign-grid-area;
   margin-bottom: 50px;
@@ -39,6 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-wrap: anywhere;
   margin: 50px;
   padding: 48px;
 }
@@ -47,6 +48,11 @@
   grid-area: text;
 } 
 
-// .cards-list__image {
-//   object-fit: contain;
-// }
+.cards-list__image {
+  object-fit: contain;
+  width: 50%;
+}
+
+.cards-list__item-0 > .cards-list__image {
+  margin-top: -150px;
+}

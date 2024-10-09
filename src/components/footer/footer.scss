@@ -3,13 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top-left-radius: 200px; //variable
   color: #fff;
+  background: #5A98D0; //variable
   border-top: 1px solid #ECECEC;
 }
 
 .client-section {
-  background: #5A98D0;
-  border-top-left-radius: 200px;
   display: flex;
   justify-content: center;
   align-items: center;

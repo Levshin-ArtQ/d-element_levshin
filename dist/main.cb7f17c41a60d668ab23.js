@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initializeHero)\n/* harmony export */ });\n/* harmony import */ var _hero_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero.scss */ \"./src/components/hero/hero.scss\");\n\nfunction initializeHero(heroIllustration) {\n  var hero = document.querySelector('.hero');\n  hero.style.backgroundImage = \"url(\".concat(heroIllustration, \")\");\n}\n\n//# sourceURL=webpack://d-element_levshin/./src/components/hero/hero.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initializeHero)\n/* harmony export */ });\n/* harmony import */ var _hero_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero.scss */ \"./src/components/hero/hero.scss\");\n\nfunction initializeHero(heroIllustration) {\n  var hero = document.querySelector('.hero__content');\n  hero.style.backgroundImage = \"url(\".concat(heroIllustration, \")\");\n}\n\n//# sourceURL=webpack://d-element_levshin/./src/components/hero/hero.js?");
 
 /***/ }),
 
@@ -46,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initializeNav)\n/* harmony export */ });\n/* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.scss */ \"./src/components/nav/nav.scss\");\n\nfunction initializeNav(aIcon, burger) {\n  var logo = document.querySelector('.icon-container__logo');\n  var burgerButton = document.querySelector('.icon-container__burger');\n  console.log(logo, burgerButton);\n  if (!logo || !burgerButton) {\n    throw new Error('Unable to find required elements');\n  }\n  logo.src = aIcon;\n  burgerButton.src = burger;\n}\n\n//# sourceURL=webpack://d-element_levshin/./src/components/nav/nav.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav.scss */ \"./src/components/nav/nav.scss\");\n\n// export default function initializeNav(aIcon, burger) {\n//   const logo = document.querySelector('.icon-container__logo');\n//   const burgerButton = document.querySelector('.icon-container__burger');\n//   console.log(logo, burgerButton);\n//   if (!logo || !burgerButton) {\n//     throw new Error('Unable to find required elements');\n//   }\n\n//   // logo.src = aIcon;\n//   burgerButton.src = burger;\n// }\n\n//# sourceURL=webpack://d-element_levshin/./src/components/nav/nav.js?");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_images_hero_illustration_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/images/hero-illustration.svg */ \"./src/assets/images/hero-illustration.svg\");\n/* harmony import */ var _components_nav_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/nav/nav.js */ \"./src/components/nav/nav.js\");\n/* harmony import */ var _components_hero_hero_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/hero/hero.js */ \"./src/components/hero/hero.js\");\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _src_assets_images_burger_icon_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../src/assets/images/burger-icon.svg */ \"./src/assets/images/burger-icon.svg\");\n/* harmony import */ var _components_description_card_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/description/card.js */ \"./src/components/description/card.js\");\n/* harmony import */ var _components_popup_popup_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/popup/popup.js */ \"./src/components/popup/popup.js\");\n__webpack_require__(/*! ./index.scss */ \"./src/index.scss\");\nvar aIcon = __webpack_require__(/*! ./assets/images/a-logo.svg */ \"./src/assets/images/a-logo.svg\");\n\n\n\n\n\n\n\nvar cardImage1 = __webpack_require__(/*! ./assets/images/card-image1.svg */ \"./src/assets/images/card-image1.svg\");\nvar cardImage2 = __webpack_require__(/*! ./assets/images/card-image2.svg */ \"./src/assets/images/card-image2.svg\");\nvar cardImage3 = __webpack_require__(/*! ./assets/images/card-image3.svg */ \"./src/assets/images/card-image3.svg\");\n\n// imageSrc, title, description, link\nvar cards = [{\n  'imageSrc': cardImage1,\n  'title': 'Bring Technology To Your Comfrotable Home',\n  'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',\n  'link': '/'\n}, {\n  'imageSrc': cardImage2,\n  'title': 'Make Your business To Be Better Famous In Internet',\n  'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',\n  'link': '/'\n}, {\n  'imageSrc': cardImage3,\n  'title': 'Build Your Digital Product That Suitable For Your Need',\n  'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',\n  'link': '/'\n}];\ndocument.addEventListener('DOMContentLoaded', function () {\n  (0,_components_nav_nav_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(aIcon, _src_assets_images_burger_icon_svg__WEBPACK_IMPORTED_MODULE_4__);\n  (0,_components_footer_footer_js__WEBPACK_IMPORTED_MODULE_3__.initializeFooter)();\n  (0,_components_hero_hero_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(_assets_images_hero_illustration_svg__WEBPACK_IMPORTED_MODULE_0__);\n  var cardsList = document.querySelector('.cards-list');\n  var popupForm = new _components_popup_popup_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"]();\n\n  // Пример кнопки, которая будет открывать попап\n  var openPopupButton = document.querySelector('.hire_section__button');\n\n  // Обработчик для открытия попапа по клику\n  openPopupButton.addEventListener('click', function () {\n    popupForm.show();\n  });\n\n  // Закрытие попапа по клику на фон или крестик (если добавите)\n  window.addEventListener('click', function (event) {\n    if (event.target === popupForm.popup) {\n      popupForm.hide();\n    }\n  });\n  cards.map(function (element, index) {\n    var card = new _components_description_card_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"](element.imageSrc, element.title, element.description, element.link);\n    var newNode = card.createCardElement();\n    newNode.classList.add('cards-list__item' + index);\n    cardsList.appendChild(newNode);\n  });\n  // window.removeEventListener(\"DOMContentLoaded\", loader);\n});\n\n//# sourceURL=webpack://d-element_levshin/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_images_hero_illustration_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/images/hero-illustration.svg */ \"./src/assets/images/hero-illustration.svg\");\n/* harmony import */ var _components_nav_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/nav/nav.js */ \"./src/components/nav/nav.js\");\n/* harmony import */ var _components_hero_hero_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/hero/hero.js */ \"./src/components/hero/hero.js\");\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _src_assets_images_burger_icon_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../src/assets/images/burger-icon.svg */ \"./src/assets/images/burger-icon.svg\");\n/* harmony import */ var _components_description_card_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/description/card.js */ \"./src/components/description/card.js\");\n/* harmony import */ var _components_popup_popup_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/popup/popup.js */ \"./src/components/popup/popup.js\");\n__webpack_require__(/*! ./index.scss */ \"./src/index.scss\");\nvar aIcon = __webpack_require__(/*! ./assets/images/a-logo.svg */ \"./src/assets/images/a-logo.svg\");\n\n\n\n\n\n\n\nvar cardImage1 = __webpack_require__(/*! ./assets/images/card-image1.svg */ \"./src/assets/images/card-image1.svg\");\nvar cardImage2 = __webpack_require__(/*! ./assets/images/card-image2.svg */ \"./src/assets/images/card-image2.svg\");\nvar cardImage3 = __webpack_require__(/*! ./assets/images/card-image3.svg */ \"./src/assets/images/card-image3.svg\");\n\n// imageSrc, title, description, link\nvar cards = [{\n  'imageSrc': cardImage1,\n  'title': 'Bring Technology To Your Comfrotable Home',\n  'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',\n  'link': '/'\n}, {\n  'imageSrc': cardImage2,\n  'title': 'Make Your business To Be Better Famous In Internet',\n  'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',\n  'link': '/'\n}, {\n  'imageSrc': cardImage3,\n  'title': 'Build Your Digital Product That Suitable For Your Need',\n  'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',\n  'link': '/'\n}];\ndocument.addEventListener('DOMContentLoaded', function () {\n  // initializeNav(aIcon, burgerIcon);\n  // initializeFooter();\n  // initializeHero(heroIllustration);\n  var cardsList = document.querySelector('.cards-list__content');\n  var popupForm = new _components_popup_popup_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"]();\n\n  // Пример кнопки, которая будет открывать попап\n  var openPopupButton = document.querySelector('.hire_section__button');\n\n  // Обработчик для открытия попапа по клику\n  openPopupButton.addEventListener('click', function () {\n    popupForm.show();\n  });\n\n  // Закрытие попапа по клику на фон или крестик (если добавите)\n  window.addEventListener('click', function (event) {\n    if (event.target === popupForm.popup) {\n      popupForm.hide();\n    }\n  });\n  cards.map(function (element, index) {\n    var card = new _components_description_card_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"](element.imageSrc, element.title, element.description, element.link);\n    var newNode = card.createCardElement();\n    newNode.classList.add('cards-list__item-' + index);\n    cardsList.appendChild(newNode);\n  });\n  // window.removeEventListener(\"DOMContentLoaded\", loader);\n});\n\n//# sourceURL=webpack://d-element_levshin/./src/index.js?");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"images/d679a3b6c1bba4ba6291.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/a-logo.svg?");
+eval("module.exports = __webpack_require__.p + \"images/a-logo.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/a-logo.svg?");
 
 /***/ }),
 
@@ -146,7 +146,7 @@ eval("module.exports = __webpack_require__.p + \"images/d679a3b6c1bba4ba6291.svg
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"images/366e5a916a4fa52725a2.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/burger-icon.svg?");
+eval("module.exports = __webpack_require__.p + \"images/burger-icon.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/burger-icon.svg?");
 
 /***/ }),
 
@@ -156,7 +156,7 @@ eval("module.exports = __webpack_require__.p + \"images/366e5a916a4fa52725a2.svg
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"images/363f4e07aa49fd24d470.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/card-image1.svg?");
+eval("module.exports = __webpack_require__.p + \"images/card-image1.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/card-image1.svg?");
 
 /***/ }),
 
@@ -166,7 +166,7 @@ eval("module.exports = __webpack_require__.p + \"images/363f4e07aa49fd24d470.svg
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"images/37527e1ec564f1999b27.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/card-image2.svg?");
+eval("module.exports = __webpack_require__.p + \"images/card-image2.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/card-image2.svg?");
 
 /***/ }),
 
@@ -176,7 +176,7 @@ eval("module.exports = __webpack_require__.p + \"images/37527e1ec564f1999b27.svg
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"images/b8b59c23d302d9a10b80.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/card-image3.svg?");
+eval("module.exports = __webpack_require__.p + \"images/card-image3.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/card-image3.svg?");
 
 /***/ }),
 
@@ -186,7 +186,7 @@ eval("module.exports = __webpack_require__.p + \"images/b8b59c23d302d9a10b80.svg
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"images/797820a66a7c5d21350d.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/hero-illustration.svg?");
+eval("module.exports = __webpack_require__.p + \"images/hero-illustration.svg\";\n\n//# sourceURL=webpack://d-element_levshin/./src/assets/images/hero-illustration.svg?");
 
 /***/ })
 
