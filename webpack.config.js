@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
+require("file-loader");
 
 module.exports = (env) => {
   return {
@@ -26,10 +27,17 @@ module.exports = (env) => {
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
-          type: "asset/resource",
-          generator: {
-            filename: "fonts/[name][ext]",
-          },
+          type: 'asset/resource',
+          use: {
+            loader: "url-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          }
+          // generator: {
+          //   filename: "fonts/[name][ext]",
+          // },
         },
         {
           test: /\.(js)$/,
@@ -50,6 +58,7 @@ module.exports = (env) => {
       path: path.resolve(__dirname, "dist"),
       clean: true,
       assetModuleFilename: "images/[hash][ext]",
+      assetModuleFilename: "assets/fonts/[name][ext]",
     },
     plugins: [
       new HtmlWebpackPlugin({

@@ -3,18 +3,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>D-element</title>
+
 </head>
 <body>
 <div id="root">
   <header class="hero">
     <div class="hero__wrapper"></div>
     <nav id="nav" class="navigation" aria-label="Main navigation">
-      <a href="#" class="icon-container"><img src="images/a-logo.svg" alt="logo" class="icon-container__logo"></a>
+      <a href="#" class="navigation__link navigation__link_logo"><img src="images/a-logo.svg" alt="logo" class="icon-container__logo" width="48" height="32"></a>
+      <ul class="navigation__list navigation__list_hidden">
+        <li class="navigation__item"><a href="#hero" class="navigation__link">Hero</a></li>
+        <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+        <li class="navigation__item"><a href="#client-section" class="navigation__link">Clients</a></li>
+        <li class="navigation__item"><a href="#contacts" class="navigation__link">Contacts</a></li>
+      </ul>
       <a href="#" class="icon-container"><img src="images/burger-icon.svg" alt="burger" class="icon-container__burger" class="burger"></a> 
+      
     </nav>
     
-      <div class="hero__content">
+      <div class="hero__content" id="hero">
         <div class="hero__info">  
           <h1 class="hero__slogan">New Automation <br/> Tool for Your Home</h1>
           <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -26,13 +34,13 @@
         </div>
       </div>
     </header>
-  <section class="cards-list">
+  <section class="cards-list" id="about">
     <div class="cards-list__content">
-      <h2 class="cards-list__text">What we do to help our client grow in digital era</h2>
+      <h2 class="cards-list__title">What we do to help our client grow in digital era</h2>
     </div>
   </section>
   <footer class="footer">
-    <section class="client-section">
+    <section class="client-section" id="client-section">
       <div class="client-section__content">
         <h3 class="client-section__title">Our Beloved Client</h3>
         <span class="client-section__text">
@@ -60,7 +68,7 @@
         <button class="hire_section__button">Let’s Talk</button>
       </div>
     </section>
-    <section class="credentials-section">
+    <section class="credentials-section" id="contacts">
       <div class="credentials-section__content">
         <table class="credentials-section__table">
           <tr>

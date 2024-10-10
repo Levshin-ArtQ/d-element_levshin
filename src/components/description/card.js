@@ -15,11 +15,15 @@ export default class Card {
     const card = document.createElement('article');
     card.classList.add('cards-list__item');
     
-
+    // Контейнер для картинки
+    const cardImageContainer = document.createElement('div');
+    cardImageContainer.classList.add('card__image-container');
+    // Картинка
     const image = document.createElement('img');
-    image.classList.add('cards-list__image');
+    image.classList.add('card__image');
     image.src = this.imageSrc;
     image.alt = `Image of ${this.title}`;
+    cardImageContainer.appendChild(image);
 
     const title = document.createElement('h2');
     title.classList.add('card__title');
@@ -35,7 +39,7 @@ export default class Card {
     link.textContent = 'Learn more';
 
     // Собираем карточку
-    card.appendChild(image);
+    card.appendChild(cardImageContainer);
     card.appendChild(title);
     card.appendChild(description);
     card.appendChild(link);

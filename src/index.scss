@@ -14,12 +14,16 @@ body {
   color: #333;
   width: 100vw;
   margin: 0;
+  font-family: "Gilroy", 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1F3F68
 }
 
 
 .hero__slogan {
-  font-family: Galien;
   font-size: 64px;
+  // font-family: Arial, Helvetica, sans-serif;
   color: #1F3F68;
   text-align: left;
 }
@@ -35,6 +39,7 @@ body {
 
 [class$=__slogan] {
   font-family: Galien;
+  font-weight: 700;
   font-size: $title-font-size;
   letter-spacing: 0.04em;
   text-align: left;
@@ -61,6 +66,27 @@ body {
   letter-spacing: 0.05em;
   text-align: center;
   align-self: start;
+  width: 100%;
+  max-width: 220px;
+  cursor: pointer;
+
+  &:hover {
+    background: #316099;
+    transition: 0.3s;
+    &:hover {
+      animation: rotate 0.5s ease-in-out infinite alternate;
+    }
+  
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(10deg);
+      }
+    }
+
+  }
 }
 
 [class$=__content] {
@@ -70,3 +96,45 @@ body {
   margin: 0 auto;
 }
 
+[class$=_hidden] {
+  // display: none;
+  animation: disappear 0.5s ease-in-out;
+  @keyframes disappear {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+      // display: none;
+    }
+  }
+  & > li {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    display: none;
+  }
+  
+}
+
+[class$=_visible] {
+  
+  animation: appear 0.5s ease-in-out forwards;
+
+  // background: linear-gradient(to bottom, transparent 40%, #000 40%, #000 60%, transparent 60%), linear-gradient(to right, transparent 40%, #000 40%, #000 60%, transparent 60%);
+
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  // display: block;
+}
