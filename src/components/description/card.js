@@ -1,5 +1,6 @@
 //import icArrowForward from './assets/images/ic-arrow-forward.svg';
-import './card.scss'
+import './card.scss';
+import arrowImage from '../../assets/images/ic_arrow_forward.svg'
 
 export default class Card {
   constructor(imageSrc, title, description, link) {
@@ -26,17 +27,21 @@ export default class Card {
     cardImageContainer.appendChild(image);
 
     const title = document.createElement('h2');
-    title.classList.add('card__title');
+    title.classList.add('card__title_smaller');
     title.textContent = this.title;
 
     const description = document.createElement('p');
     description.classList.add('card__description');
     description.textContent = this.description;
 
+    const arrowIcon = document.createElement('img');
+    arrowIcon.classList.add('card__arrow-icon');
+    arrowIcon.src = arrowImage;
     const link = document.createElement('a');
     link.classList.add('card__link');
     link.href = this.link;
     link.textContent = 'Learn more';
+    link.appendChild(arrowIcon);
 
     // Собираем карточку
     card.appendChild(cardImageContainer);

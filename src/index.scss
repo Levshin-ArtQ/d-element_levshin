@@ -53,6 +53,11 @@ body {
   text-align: left;
 }
 
+[class$=__title_smaller] {
+  font-size: 20px;
+  font-family: 'Gilroy';
+}
+
 [class$=__button] {
   margin-top: 40px;
   padding: 15px 50px;

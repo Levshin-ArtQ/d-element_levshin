@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
-require("file-loader");
 
 module.exports = (env) => {
   return {
@@ -25,48 +24,54 @@ module.exports = (env) => {
           //   loader: "image-webpack-loader",
           // },
         },
-        {
-          test: /\.(woff|woff2|eot|ttf|otf)$/i,
-          type: 'asset/resource',
-          use: {
-            loader: "url-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "fonts/",
-            },
-          }
-          // generator: {
-          //   filename: "fonts/[name][ext]",
-          // },
-        },
+        // {
+        //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        //   type: 'asset/resource',
+        //   use: {
+        //     loader: "url-loader",
+        //     // options: {
+        //     //   name: "[name].[ext]",
+        //     //   outputPath: "./assets/fonts/",
+        //     // },
+        //   },
+        // },
         {
           test: /\.(js)$/,
           exclude: /node_modules/,
           use: ["babel-loader"],
         },
+        {
+          test: /\.(ttf|eot|woff|woff2)$/,
+          use: {
+            loader: "file-loader",
+            // include: path.resolve(__dirname, "./src/assets/fonts"),
+            options: {
+              name: "[name].[ext]",
+              outputPath: "/fonts/",
+              esModule: false,
+            },
+          },
+        },
       ],
     },
     optimization: {
       minimize: true,
-      minimizer: [
-        new CssMinimizerPlugin(),
-        new HtmlMinimizerPlugin(),
-      ],
+      minimizer: [new CssMinimizerPlugin(), new HtmlMinimizerPlugin()],
     },
     output: {
       filename: "[name].[contenthash].js",
       path: path.resolve(__dirname, "dist"),
       clean: true,
-      assetModuleFilename: "images/[hash][ext]",
-      assetModuleFilename: "assets/fonts/[name][ext]",
+      // assetModuleFilename: "images/[hash][ext]",
+      // assetModuleFilename: "assets/fonts/[name][ext]",
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src', 'index.html'),
-        filename: 'index.html',
+        template: path.resolve(__dirname, "src", "index.html"),
+        filename: "index.html",
         inject: true,
       }),
-    
+
       new MiniCssExtractPlugin({
         filename: "[name].css",
       }),
@@ -76,7 +81,7 @@ module.exports = (env) => {
       static: path.resolve(__dirname, "./dist"),
       hot: true,
       open: true,
-      port: 8101,
+      port: 8100,
     },
     watchOptions: {
       poll: 1000,

@@ -10,38 +10,93 @@ $title-font-size: 64px;
 $section-title-font-size: 48px;
 $subtitle-font-size: 24px;
 $text-font-size: 16px;
+
+// @font-face {
+//   font-family: 'Gilroy';
+//   src: url('Gilroy-Light.woff2') format('woff2'), url('Gilroy-Light.woff') format('woff');
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
 @font-face {
   font-style: normal;
   font-weight: 300;
-  font-family: "Gilroy";
-  
+  font-family: Gilroy;
+
   font-display: swap;
-  src: url("./assets/fonts/Gilroy-300.woff2") format("woff2"), url("./assets/fonts/Gilroy-300.woff") format("woff");
+  src: url("./fonts/Gilroy-300.woff2") format("woff2"), url("./fonts/Gilroy-300.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Gilroy";
+  font-family: Gilroy;
 
   font-display: swap;
-  src: url("./assets/fonts/Gilroy-400.woff2") format("woff2"), url("./assets/fonts/Gilroy-400.woff") format("woff");
+  src: url("./fonts/Gilroy-400.woff2") format("woff2"), url("./fonts/Gilroy-400.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 600;
-  font-family: "Gilroy";
+  font-family: Gilroy;
 
   font-display: swap;
-  src: url("./assets/fonts/Gilroy-600.woff2") format("woff2"), url("./assets/fonts/Gilroy-600.woff") format("woff");
+  src: url("./fonts/Gilroy-600.woff2") format("woff2"), url("./fonts/Gilroy-600.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "Galien";
+  font-family: Galien;
 
   font-display: swap;
-  src: url("./assets/fonts/Galien-700.woff2") format("woff2"), url("./assets/fonts/Galien-700.woff") format("woff");
+  src: url("./fonts/Galien-700.woff2") format("woff2"), url("./fonts/Galien-700.woff") format("woff");
 }
+
+body {
+  font-family: Gilroy !important;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1F3F68
+}
+
+
+
+
+// @font-face {
+//   font-style: normal;
+//   font-weight: 300;
+//   font-family: "Gilroy";
+
+//   font-display: swap;
+//   src: url("./assets/fonts/Gilroy-300.woff2") format("woff2"), url("./assets/fonts/Gilroy-300.woff") format("woff");
+// }
+
+// @font-face {
+//   font-style: normal;
+//   font-weight: 400;
+//   font-family: "Gilroy";
+
+//   font-display: swap;
+//   src: url("./assets/fonts/Gilroy-400.woff2") format("woff2"), url("./assets/fonts/Gilroy-400.woff") format("woff");
+// }
+
+// @font-face {
+//   font-style: normal;
+//   font-weight: 600;
+//   font-family: "Gilroy";
+
+//   font-display: swap;
+//   src: url("./assets/fonts/Gilroy-600.woff2") format("woff2"), url("./assets/fonts/Gilroy-600.woff") format("woff");
+// }
+
+// @font-face {
+//   font-style: normal;
+//   font-weight: 700;
+//   font-family: "Galien";
+
+//   font-display: swap;
+//   src: url("./assets/fonts/Galien-700.woff2") format("woff2"), url("./assets/fonts/Galien-700.woff") format("woff");
+// }

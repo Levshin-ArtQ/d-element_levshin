@@ -28,6 +28,7 @@ const cards = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     link: "/",
   },
+  
   {
     imageSrc: cardImage3,
     title: "Build Your Digital Product That Suitable For Your Need",
